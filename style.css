@@ -1,1 +1,110 @@
-bdy{font-family:Arial,sans-serif}header{padding:80px 0}.card{margin:20px 0}o
+/* Premium Dark Cyan/Blue Theme Variables */
+:root {
+    --bg-main: #0b0f19;          /* Rich Dark Background */
+    --bg-card: rgba(17, 24, 39, 0.7); /* Premium Dark Glass Card */
+    --text-bright: #ffffff;      /* Bright White Text */
+    --text-muted: #94a3b8;       /* Silver/Gray Muted Text */
+    --primary: #3b82f6;          /* Neon Blue Accent */
+    --primary-glow: rgba(59, 130, 246, 0.25);
+    --border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Base Configuration */
+body {
+    background-color: var(--bg-main) !important;
+    color: var(--text-bright) !important;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Glassmorphism Navigation Bar */
+.navbar-custom {
+    background-color: rgba(11, 15, 25, 0.8) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+}
+.navbar-custom .navbar-brand {
+    color: var(--text-bright) !important;
+    font-size: 1.5rem;
+}
+.navbar-custom .navbar-brand span {
+    color: var(--primary);
+}
+.navbar-custom .nav-link {
+    color: var(--text-muted) !important;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.navbar-custom .nav-link.active, .navbar-custom .nav-link:hover {
+    color: var(--primary) !important;
+}
+
+/* Glowing Glassmorphism Cards */
+.glass-card {
+    background: var(--bg-card) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 16px !important;
+    color: var(--text-bright) !important;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+.glass-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(59, 130, 246, 0.4) !important;
+    box-shadow: 0 10px 30px var(--primary-glow) !important;
+}
+
+/* Typography Clarity */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-bright) !important;
+}
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+/* Counter & Icon Design */
+.counter-box i, .icon-box i {
+    color: var(--primary) !important;
+}
+.icon-box {
+    background: rgba(59, 130, 246, 0.1) !important;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+/* Premium Form Fields */
+#contactForm .form-control {
+    background-color: rgba(15, 23, 42, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: var(--text-bright) !important;
+    border-radius: 8px !important;
+    padding: 12px 15px !important;
+    transition: all 0.3s ease;
+}
+#contactForm .form-control:focus {
+    background-color: #0f172a !important;
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 0.25rem var(--primary-glow) !important;
+}
+
+/* Footer & Buttons */
+footer {
+    border-top: 1px solid var(--border-color);
+}
+.btn-outline-primary {
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+.btn-outline-primary:hover {
+    background-color: var(--primary) !important;
+    color: #ffffff !important;
+}
